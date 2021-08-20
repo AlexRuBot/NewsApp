@@ -9,7 +9,7 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
     
-    private weak var delegate: NewsTableViewControllerDelegate?
+    weak var delegate: NewsTableViewControllerDelegate?
     
     @IBOutlet weak var categorySC: UISegmentedControl!
     

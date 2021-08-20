@@ -87,6 +87,7 @@ class NewsTableViewController: UITableViewController, NewsTableViewControllerDel
             detailVC.titleL = arrayNews[indexPath.row].title
             detailVC.context = arrayNews[indexPath.row].content
             detailVC.urlLink = arrayNews[indexPath.row].url
+            detailVC.navigationItem.title = arrayNews[indexPath.row].source?.name
             guard let url = URL(string: arrayNews[indexPath.row].urlToImage ?? "") else { return }
             if let data = try? Data(contentsOf: url ) {
                 detailVC.image = UIImage(data: data)
